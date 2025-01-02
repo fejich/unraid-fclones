@@ -1,0 +1,67 @@
+<?xml version='1.0' standalone='yes'?>
+<!DOCTYPE PLUGIN [
+  <!ENTITY name      "fclones">
+  <!ENTITY author    "fejich">
+  <!ENTITY version   "2025.01.02">
+  <!ENTITY gitURL    "https://github.com/&author;/unraid-&name;">
+  <!ENTITY pluginURL "https://raw.githubusercontent.com/&author;/unraid-&name;/master/&name;.plg">
+  <!ENTITY plugin    "/boot/config/plugins/&name;">
+  <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+]>
+
+<PLUGIN  name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" min="6.9.0" support="https://github.com/pkolaczk/fclones">
+
+<CHANGES>
+
+###2025.01.02
+- Initial release
+
+</CHANGES>
+
+
+<FILE Run="/bin/bash">
+<INLINE>
+
+echo "------------------------"
+echo "---downloadlling fclones---"
+echo "------------------------"
+cd /boot/config/plugins/&name;
+wget https://github.com/pkolaczk/fclones/releases/download/v0.34.0/fclones-0.34.0-linux-glibc-x86_64.tar.gz
+mv fclones-0.34.0-linux-glibc-x86_64.tar.gz &name;-&version;.tgz
+
+</INLINE>
+</FILE>
+
+<FILE Name="/boot/config/plugins/&name;/&name;-&version;.tgz" Run="installpkg">
+</FILE>
+
+<FILE Name="&emhttp;/README.md">
+<INLINE>
+**fclones**
+
+Efficient duplicate file finder and remover
+
+This is a plugin for the fclones binary executable
+Source: https://github.com/pkolaczk/fclones
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+
+echo "------------------------"
+echo "---Uninstalling fclones---"
+echo "------------------------"
+# Remove plugin related files
+removepkg &name;-&version;
+rm -rf &plugin;
+rm -rf &emhttp;
+echo
+echo "---------------------------------------"
+echo "---Uninstallation of fclones complete!---"
+echo "---------------------------------------"
+echo
+
+</INLINE>
+</FILE>
+</PLUGIN>
