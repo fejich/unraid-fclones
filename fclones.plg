@@ -25,6 +25,7 @@
 echo "------------------------"
 echo "---downloadlling fclones---"
 echo "------------------------"
+mkdir /boot/config/plugins/&name;
 cd /boot/config/plugins/&name;
 wget https://github.com/pkolaczk/fclones/releases/download/v0.34.0/fclones-0.34.0-linux-glibc-x86_64.tar.gz
 mv fclones-0.34.0-linux-glibc-x86_64.tar.gz &name;-&version;.tgz
