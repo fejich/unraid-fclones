@@ -11,3 +11,7 @@ Source: https://github.com/pkolaczk/fclones
 ![INSTALL](install.jpg)
 
 https://raw.githubusercontent.com/fejich/unraid-fclones/master/fclones.plg
+
+### use
+
+![use](use.jpg)
