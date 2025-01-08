@@ -2,16 +2,19 @@
 <!DOCTYPE PLUGIN [
   <!ENTITY name      "fclones">
   <!ENTITY author    "fejich">
-  <!ENTITY version   "2025.01.02">
+  <!ENTITY version   "2025.01.08">
   <!ENTITY gitURL    "https://github.com/&author;/unraid-&name;">
   <!ENTITY pluginURL "https://raw.githubusercontent.com/&author;/unraid-&name;/master/&name;.plg">
   <!ENTITY plugin    "/boot/config/plugins/&name;">
   <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN  name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" min="6.9.0" support="https://github.com/pkolaczk/fclones">
+<PLUGIN  name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" min="6.9.0" support="https://github.com/fejich/unraid-fclones">
 
 <CHANGES>
+
+###2025.01.08
+- Add icon
 
 ###2025.01.02
 - Initial release
@@ -22,6 +25,10 @@
 <URL>https://github.com/pkolaczk/fclones/releases/download/v0.34.0/fclones-0.34.0-linux-glibc-x86_64.tar.gz</URL>
 </FILE>
 
+<FILE Name="/usr/local/emhttp/plugins/&name;/images/&name;.png">
+<URL>https://raw.githubusercontent.com/&author;/unraid-&name;/main/logo.png</URL>
+</FILE>
+
 <FILE Name="&emhttp;/README.md">
 <INLINE>
 **fclones**
@@ -29,7 +36,9 @@
 Efficient duplicate file finder and remover
 
 This is a plugin for the fclones binary executable
+
 Source: https://github.com/pkolaczk/fclones
+
 </INLINE>
 </FILE>
 
