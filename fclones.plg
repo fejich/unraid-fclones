@@ -25,8 +25,12 @@
 <URL>https://github.com/pkolaczk/fclones/releases/download/v0.34.0/fclones-0.34.0-linux-glibc-x86_64.tar.gz</URL>
 </FILE>
 
+<FILE Name="/boot/config/plugins/&name;/icon.png">
+<URL>https://raw.githubusercontent.com/&author;/unraid-&name;/main/logo.png</URL>
+</FILE>
+
 <FILE Name="/usr/local/emhttp/plugins/&name;/images/&name;.png">
-<URL>https://raw.gitmirror.com/&author;/unraid-&name;/main/logo.png</URL>
+<LOCAL>/boot/config/plugins/&name;/icon.png</LOCAL>
 </FILE>
 
 <FILE Name="&emhttp;/README.md">
