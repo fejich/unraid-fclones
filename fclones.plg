@@ -26,10 +26,12 @@
 
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;.tgz" Run="installpkg">
 <URL>https://github.com/pkolaczk/fclones/releases/download/v0.35.0/fclones-0.35.0-linux-glibc-x86_64.tar.gz</URL>
+<SHA256>24631bca99e4c20707d12f24676e83a5f1169bd350924dd9852157b243246dff</SHA256>
 </FILE>
 
 <FILE Name="/boot/config/plugins/&name;/icon.png">
 <URL>https://raw.githubusercontent.com/&author;/unraid-&name;/main/logo.png</URL>
+<SHA256>e0d6fbbaa1005fdf3822c824ce387c76e0c25c684c69a711dac233234bd8437d</SHA256>
 </FILE>
 
 <FILE Name="/usr/local/emhttp/plugins/&name;/images/&name;.png">
